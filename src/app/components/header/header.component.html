@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <figure class="figure">
+        <img
+          src="https://picsum.photos/256/256"
+          class="figure-img img-fluid rounded"
+          alt="my mug shot"
+        />
+      </figure>
+    </div>
+    <div class="col">
+      <!-- full name -->
+      <h1>{{ name | titlecase }}</h1>
+
+      <!-- titles -->
+      <div *ngFor="let title of titles">
+        <h2>{{ title | titlecase }}</h2>
+      </div>
+
+      <!-- summary -->
+      <h3>
+        {{ summary }}
+      </h3>
+
+      <!-- links -->
+      <div class="contact-info">
+        <h2>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          {{ contactInfo.phone | slice: 0:3 }}-{{
+            contactInfo.phone | slice: 3:6
+          }}-{{ contactInfo.phone | slice: 5:9 }}
+        </h2>
+        <h2>
+          <i class="fa-solid fa-envelope"></i>
+          {{ contactInfo.email }}
+        </h2>
+        <h2>
+          <i class="fa-solid fa-location-dot"></i>
+          {{ contactInfo.location.city | titlecase }},
+          {{ contactInfo.location.state | titlecase }}
+        </h2>
+        <h2><i class="fa-brands fa-github"></i> {{ contactInfo.github }}</h2>
+        <h2>
+          <i class="fa-brands fa-linkedin"></i> {{ contactInfo.linkedin }}
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
