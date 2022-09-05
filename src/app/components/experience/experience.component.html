@@ -1,6 +1,9 @@
 <div class="container mt-5">
   <div class="row border-bottom">
-    <p class="text-uppercase font-weight-bold"><i class="fa-solid fa-graduation-cap"></i> education</p>
+    <p class="text-uppercase font-weight-bold">
+      <i [ngClass]="sectionIcon"></i>
+      {{ sectionTitle }}
+    </p>
   </div>
   <div class="row" *ngFor="let e of experiences">
     <div class="skill-set p-0 d-flex col-12 mt-4">
@@ -12,8 +15,8 @@
         />
       </div>
       <div class="school-details ml-2">
-        <p class="p-0 m-0 font-weight-bold">{{e.degree }}</p>
-        <p class="p-0 m-0">{{e.school | titlecase}} - {{e.year}}</p>
+        <p class="p-0 m-0 font-weight-bold">{{ e.title }}</p>
+        <p class="p-0 m-0">{{ e.institution | titlecase }} - {{ e.year }}</p>
       </div>
     </div>
   </div>

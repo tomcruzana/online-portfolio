@@ -11,4 +11,6 @@ export class ExperienceComponent implements OnInit {
   ngOnInit(): void {}
 
   @Input() experiences: any[] = [];
+  @Input() sectionTitle: string = '';
+  @Input() sectionIcon: string = '';
 }

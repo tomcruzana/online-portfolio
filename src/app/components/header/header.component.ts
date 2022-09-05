@@ -27,48 +27,75 @@ export class HeaderComponent implements OnInit {
   educationExperiences: any[] = [
     {
       thumb: this.IMG_PATH + 'apus.png',
-      degree: 'MS Information Technology, Software Development',
-      school: 'american public university',
+      title: 'MS Information Technology, Software Development',
+      institution: 'american public university',
       year: '2020',
     },
     {
       thumb: this.IMG_PATH + 'cap.png',
-      degree: 'BS Information Technology',
-      school: 'CAP college',
+      title: 'BS Information Technology',
+      institution: 'CAP college',
       year: '2017',
     },
     {
       thumb: this.IMG_PATH + 'sti.png',
-      degree: 'Diploma in Computer and Electronics Technology',
-      school: 'system technology institute college',
+      title: 'Diploma in Computer and Electronics Technology',
+      institution: 'system technology institute college',
       year: '2011',
+    },
+  ];
+
+  certificationExperiences: any[] = [
+    {
+      thumb: this.IMG_PATH + 'oracle.png',
+      title: 'OCA - Java SE 8 Programmer O',
+      institution: 'Oracle',
+      year: '2022',
+    },
+    {
+      thumb: this.IMG_PATH + 'scrumorg.png',
+      title: 'Professional Scrum Master',
+      institution: 'Scrum.org',
+      year: '2021',
+    },
+    {
+      thumb: this.IMG_PATH + 'snow.png',
+      title: 'Certified System Administrator',
+      institution: 'ServiceNow',
+      year: '2020',
+    },
+    {
+      thumb: this.IMG_PATH + 'ms.png',
+      title: 'MTA - Software Development Fundamentals',
+      institution: 'Microsoft',
+      year: '2018',
     },
   ];
 
   workExperiences: any[] = [
     {
       thumb: this.IMG_PATH + 'infosys.png',
-      degree: 'Associate Software Developer',
-      school: 'Infosys Ltd',
-      year: '2021-2022',
+      title: 'Associate Software Developer',
+      institution: 'Infosys Ltd',
+      year: '(2021-2022)',
     },
     {
       thumb: this.IMG_PATH + 'custom.png',
-      degree: 'Configuration Leader',
-      school: 'Custom America Inc',
-      year: '2017 - 2020',
+      title: 'Configuration Leader',
+      institution: 'Custom America Inc',
+      year: '(2017-2020)',
     },
     {
       thumb: this.IMG_PATH + 'sutherland.png',
-      degree: 'Consultant',
-      school: 'Sutherland Global Services',
-      year: '2013 - 2014',
+      title: 'Consultant',
+      institution: 'Sutherland Global Services',
+      year: '(2013-2014)',
     },
     {
       thumb: this.IMG_PATH + 'stream.png',
-      degree: 'Technical Support Professional',
-      school: 'Stream Global Services',
-      year: '2011 - 2012',
+      title: 'Technical Support Professional',
+      institution: 'Stream Global Services',
+      year: '(2011-2012)',
     },
   ];
 }
