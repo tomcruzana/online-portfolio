@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container my-5">
   <div class="row">
-    <div class="col">
+    <div class="col-lg-3 col-m-12">
       <figure class="figure">
         <img
           src="https://picsum.photos/256/256"
@@ -9,41 +9,63 @@
         />
       </figure>
     </div>
-    <div class="col">
+    <div class="col-lg-9 col-m-12">
       <!-- full name -->
-      <h1>{{ name | titlecase }}</h1>
+      <p class="font-weight-bold">{{ name | titlecase }}</p>
 
       <!-- titles -->
       <div *ngFor="let title of titles">
-        <h2>{{ title | titlecase }}</h2>
+        <p class="font-weight-bold">{{ title | titlecase }}</p>
       </div>
 
       <!-- summary -->
-      <h3>
-        {{ summary }}
-      </h3>
-
+      <div class="row">
+        <div class="col-lg-12">
+          <p>
+            {{ summary }}
+          </p>
+        </div>
+      </div>
       <!-- links -->
-      <div class="contact-info">
-        <h2>
-          <i class="fa-solid fa-mobile-screen-button"></i>
-          {{ contactInfo.phone | slice: 0:3 }}-{{
-            contactInfo.phone | slice: 3:6
-          }}-{{ contactInfo.phone | slice: 5:9 }}
-        </h2>
-        <h2>
-          <i class="fa-solid fa-envelope"></i>
-          {{ contactInfo.email }}
-        </h2>
-        <h2>
-          <i class="fa-solid fa-location-dot"></i>
-          {{ contactInfo.location.city | titlecase }},
-          {{ contactInfo.location.state | titlecase }}
-        </h2>
-        <h2><i class="fa-brands fa-github"></i> {{ contactInfo.github }}</h2>
-        <h2>
-          <i class="fa-brands fa-linkedin"></i> {{ contactInfo.linkedin }}
-        </h2>
+      <div class="contact-info col-lg-12">
+        <div class="row">
+          <div class="col-m-12">
+            <p class="mr-4">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              {{ contactInfo.phone | slice: 0:3 }}-{{
+                contactInfo.phone | slice: 3:6
+              }}-{{ contactInfo.phone | slice: 5:9 }}
+            </p>
+          </div>
+
+          <div class="col-m-12">
+            <p class="mr-4">
+              <i class="fa-solid fa-envelope"></i>
+              {{ contactInfo.email }}
+            </p>
+          </div>
+
+          <div class="col-m-12">
+            <p class="mr-4">
+              <i class="fa-solid fa-location-dot"></i>
+              {{ contactInfo.location.city | titlecase }},
+              {{ contactInfo.location.state | titlecase }}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-m-12">
+            <p class="mr-4 col-m-12">
+              <i class="fa-brands fa-github"></i> {{ contactInfo.github }}
+            </p>
+          </div>
+          <div class="col-m-12">
+            <p class="mr-4">
+              <i class="fa-brands fa-linkedin"></i>
+              {{ contactInfo.linkedin }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

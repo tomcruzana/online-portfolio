@@ -1,0 +1,10 @@
+<div class="container my-5">
+  <div class="row border-bottom">
+    <p class="text-uppercase font-weight-bold">skills</p>
+  </div>
+  <div class="row">
+    <div class="skill-set mt-2" *ngFor="let skill of skills">
+      <p class="p-1 my-0 mr-2">{{ skill | titlecase }},</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<!--Main title-->
+<div class="main-title border-bottom">
+  <h1 class="text-uppercase">education</h1>
+</div>
+
+<!--End main title-->
+
+<!--Content-->
+<div class="content">
+  <!--Block content-->
+  <div class="block-content">
+    <!--Timeline-->
+    <div class="timeline education">
+      <!--Row-->
+      <div class="row">
+        <div class="col-md-12">
+          <!--Experience holder-->
+          <div class="exp-holder margTop">
+            <!--Experience-->
+            <div
+              class="exp"
+              *ngFor="let property of degreeInformation; let i = index"
+            >
+              <div class="hgroup">
+                <img
+                  [src]="property.image"
+                  class="img-fluid school-thumb"
+                  alt="..."
+                />
+                <h4>{{ property.name }} - {{ property.degree }}</h4>
+                <h6><i class="icon-calendar"></i>{{ property.year }}</h6>
+              </div>
+              <p>
+                {{ property.description }}
+              </p>
+            </div>
+            <!--End experience-->
+          </div>
+          <!--End experience holder-->
+        </div>
+      </div>
+      <!--End row-->
+    </div>
+    <!--End timeline-->
+  </div>
+  <!--End block content-->
+</div>
+<!--End content-->
