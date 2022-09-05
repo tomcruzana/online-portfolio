@@ -9,7 +9,6 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
   name: string = 'thomas cruzana';
   titles: string[] = ['software developer, web developer'];
   summary: string =
