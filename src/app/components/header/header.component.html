@@ -1,17 +1,22 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-lg-3 col-m-12">
-      <figure class="figure">
+      <figure class="figure m-0 p-0 rc-0">
         <img
           src="https://picsum.photos/256/256"
-          class="figure-img img-fluid rounded"
+          class="figure-img img-fluid m-0 p-0"
           alt="my mug shot"
         />
       </figure>
+      <div class="btn-group-vertical d-grid m-0 p-0 w-100">
+        <button type="button" class="btn btn-primary rc-0">About</button>
+        <button type="button" class="btn btn-primary rc-0">Portfolio</button>
+        <button type="button" class="btn btn-primary rc-0">Contact</button>
+      </div>
     </div>
     <div class="col-lg-9 col-m-12">
       <!-- full name -->
-      <p class="font-weight-bold">{{ name | titlecase }}</p>
+      <h4 class="font-weight-bold">{{ name | uppercase }}</h4>
 
       <!-- titles -->
       <div *ngFor="let title of titles">
@@ -68,7 +73,8 @@
         </div>
       </div>
       <app-skills></app-skills>
-      <app-experience></app-experience>
+      <!-- todo -->
+      <!-- <app-experience></app-experience> -->
     </div>
   </div>
 </div>
