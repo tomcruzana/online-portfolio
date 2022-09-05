@@ -1,3 +1,12 @@
-.rc-0{
+.rc-0 {
   border-radius: 0px !important;
+}
+
+.fa-github,
+.fa-dev {
+  color: #000;
+}
+
+.fa-linkedin-in {
+  color: #0072b1;
 }
