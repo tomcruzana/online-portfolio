@@ -10,27 +10,26 @@ export class ExperienceComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  degreeInformation: any = [
+  IMG_PATH: String = '../../../assets/';
+
+  educations: any[] = [
     {
-      image: 'https://picsum.photos/50/50',
-      name: 'american public university',
-      degree: 'master of science - information technology',
+      thumb: this.IMG_PATH + 'apus.png',
+      degree: 'MS Information Technology, Software Development',
+      school: 'american public university',
       year: '2020',
-      description: 'concentration: enterprise software development',
     },
     {
-      image: 'https://picsum.photos/50/50',
-      name: 'cap college',
-      degree: 'ba information technology',
+      thumb: this.IMG_PATH + 'cap.png',
+      degree: 'BS Information Technology',
+      school: 'CAP college',
       year: '2017',
-      description: '',
     },
     {
-      image: 'https://picsum.photos/50/50',
-      name: 'system technology institute',
-      degree: 'diploma in computer and electronics technology',
+      thumb: this.IMG_PATH + 'sti.png',
+      degree: 'Diploma in Computer and Electronics Technology',
+      school: 'system technology institute college',
       year: '2011',
-      description: '',
     },
   ];
 }

@@ -1,55 +1,20 @@
-<div class="container my-2">
-  <div class="row">
-    <!--Main title-->
-    <div class="main-title border-bottom">
-      <p class="text-uppercase font-weight-bold">education</p>
-    </div>
-
-    <!--End main title-->
-
-    <!--Content-->
-    <div class="content">
-      <!--Block content-->
-      <div class="block-content">
-        <!--Timeline-->
-        <div class="timeline education">
-          <!--Row-->
-          <div class="row">
-            <div class="col-md-12">
-              <!--Experience holder-->
-              <div class="exp-holder margTop">
-                <!--Experience-->
-                <div
-                  class="exp"
-                  *ngFor="let property of degreeInformation; let i = index"
-                >
-                  <div class="hgroup">
-                    <img
-                      [src]="property.image"
-                      class="img-fluid school-thumb"
-                      alt="..."
-                    />
-                    <p class="font-weight-bold">
-                      {{ property.degree }}
-                    </p>
-                    <p>{{ property.name }}</p>
-                    <p><i class="icon-calendar"></i>{{ property.year }}</p>
-                  </div>
-                  <p>
-                    {{ property.description }}
-                  </p>
-                </div>
-                <!--End experience-->
-              </div>
-              <!--End experience holder-->
-            </div>
-          </div>
-          <!--End row-->
-        </div>
-        <!--End timeline-->
+<div class="container mt-5">
+  <div class="row border-bottom">
+    <p class="text-uppercase font-weight-bold">education</p>
+  </div>
+  <div class="row" *ngFor="let e of educations">
+    <div class="skill-set p-0 d-flex col-12 mt-4">
+      <div class="school-thumb">
+        <img
+          [src]="e.thumb"
+          class="img-thumbnail rounded-circle"
+          alt="school photo"
+        />
       </div>
-      <!--End block content-->
+      <div class="school-details ml-2">
+        <p class="p-0 m-0 font-weight-bold">{{e.degree }}</p>
+        <p class="p-0 m-0">{{e.school | titlecase}} - {{e.year}}</p>
+      </div>
     </div>
-    <!--End content-->
   </div>
 </div>
