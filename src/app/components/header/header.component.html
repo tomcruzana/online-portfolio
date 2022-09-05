@@ -1,4 +1,4 @@
-<div class="container my-5 animate__animated animate__fadeInUp">
+<div class="container my-5">
   <div class="row">
     <div class="col-lg-3 col-m-12">
       <figure class="figure m-0 p-0 rc-0">
@@ -105,7 +105,8 @@
         </div>
       </div> -->
       <app-skills></app-skills>
-      <app-experience></app-experience>
+      <app-experience [experiences]="educationExperiences"></app-experience>
+      <app-experience [experiences]="workExperiences"></app-experience>
       <app-download></app-download>
     </div>
   </div>
