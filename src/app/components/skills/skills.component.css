@@ -1,0 +1,7 @@
+.skill-pill {
+  cursor: pointer;
+}
+
+.skill-pill:hover {
+  background-color: #9fa6b2;
+}

@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { DownloadComponent } from './components/download/download.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
     NavbarComponent,
     SkillsComponent,
     ExperienceComponent,
+    DownloadComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
