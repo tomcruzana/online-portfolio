@@ -1,6 +1,6 @@
 <!--Main title-->
 <div class="main-title border-bottom">
-  <h1 class="text-uppercase">education</h1>
+  <p class="text-uppercase font-weight-bold">education</p>
 </div>
 
 <!--End main title-->
@@ -27,8 +27,11 @@
                   class="img-fluid school-thumb"
                   alt="..."
                 />
-                <h4>{{ property.name }} - {{ property.degree }}</h4>
-                <h6><i class="icon-calendar"></i>{{ property.year }}</h6>
+                <p class="font-weight-bold">
+                  {{ property.degree }}
+                </p>
+                <p>{{ property.name }}</p>
+                <p><i class="icon-calendar"></i>{{ property.year }}</p>
               </div>
               <p>
                 {{ property.description }}
