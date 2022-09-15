@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { DownloadComponent } from './components/download/download.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { DownloadComponent } from './components/download/download.component';
     SkillsComponent,
     ExperienceComponent,
     DownloadComponent,
+    ContactFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

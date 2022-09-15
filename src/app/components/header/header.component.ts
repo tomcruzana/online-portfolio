@@ -48,7 +48,7 @@ export class HeaderComponent implements OnInit {
   certificationExperiences: any[] = [
     {
       thumb: this.IMG_PATH + 'oracle.png',
-      title: 'OCA - Java SE 8 Programmer O',
+      title: 'OCA - Java SE 11 Developer',
       institution: 'Oracle',
       year: '2022',
     },
