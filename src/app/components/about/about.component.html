@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <app-header></app-header>
+</div>
+
+<app-skills></app-skills>
+<app-experience
+  [experiences]="educationExperiences"
+  [sectionTitle]="'education'"
+  [sectionIcon]="'fa-solid fa-graduation-cap'"
+></app-experience>
+<app-experience
+  [experiences]="certificationExperiences"
+  [sectionTitle]="'certifications'"
+  [sectionIcon]="'fa-solid fa-certificate'"
+></app-experience>
+<app-experience
+  [experiences]="workExperiences"
+  [sectionTitle]="'experience'"
+  [sectionIcon]="'fa-solid fa-briefcase'"
+></app-experience>
+<app-download></app-download>

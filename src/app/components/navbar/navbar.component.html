@@ -1,29 +1,43 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="btn-group-vertical d-grid m-0 p-0 w-100">
   <button
-    class="navbar-toggler"
     type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
+    class="btn btn-primary rc-0 text-uppercase d-flex justify-content-between"
+    routerLink="/about"
   >
-    <span class="navbar-toggler-icon"></span>
+    <i class="fa-solid fa-address-card"></i> About
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"
-          >About <span class="sr-only">(current)</span></a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Portfolio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contact</a>
-      </li>
-    </ul>
+  <button
+    type="button"
+    class="btn btn-primary rc-0 text-uppercase d-flex justify-content-between"
+    routerLink="/portfolio"
+  >
+    <i class="fa-solid fa-cube"></i> Portfolio
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary rc-0 text-uppercase d-flex justify-content-between"
+    routerLink="/contact-form"
+  >
+    <i class="fa-solid fa-phone"></i> Contact
+  </button>
+</div>
+<div
+  class="border d-flex justify-content-around p-2"
+  [ngStyle]="{ 'background-color': '#fff' }"
+>
+  <div class="github">
+    <a href="https://github.com/tomcruzana" target="_blank"
+      ><i class="fa-brands fa-github fa-2x"></i
+    ></a>
   </div>
-</nav>
+  <div class="linkedin">
+    <a href="https://dev.to/tommyc" target="_blank"
+      ><i class="fa-brands fa-dev fa-2x"></i
+    ></a>
+  </div>
+  <div class="linkedin">
+    <a href="https://www.linkedin.com/in/thomascruzana/" target="_blank"
+      ><i class="fa-brands fa-linkedin-in fa-2x"></i
+    ></a>
+  </div>
+</div>

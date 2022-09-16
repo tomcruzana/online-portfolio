@@ -1,2 +1,14 @@
-<app-header></app-header>
+<div class="container my-5">
+  <div class="row">
+    <!-- mugshot & navbar -->
+    <div class="col-lg-3 col-m-12">
+      <app-mugshot></app-mugshot>
+      <app-navbar></app-navbar>
+    </div>
 
+    <div class="col-lg-9 col-m-12" [ngStyle]="{ 'background-color': '#fff' }">
+      <!-- router -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
