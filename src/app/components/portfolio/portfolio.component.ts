@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  styleUrls: ['./portfolio.component.css'],
 })
 export class PortfolioComponent implements OnInit {
-
-  constructor() { }
+  constructor(private projectsService: ProjectsService) {}
 
   ngOnInit(): void {
+    this.projects = this.projectsService.getProjectsService();
   }
 
-  projects: string[] = ["Snippify", "E-Commerce", "Metaverse SG", "Weather Jet", "Motivation Generator", "Subscription Page", "WiFi Credential Fetcher", "Vcard AR", "Battle of the Nerds"];
-
+  projects: any[] = [];
 }
