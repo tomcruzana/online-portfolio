@@ -11,7 +11,10 @@ export class ContactFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  simpleAlert() {
+  contactFormData: any;
+
+  sendContactFormData(myForm: any) {
+    this.contactFormData = myForm;
     Swal.fire({
       icon: 'success',
       title: 'Your message has been sent.',

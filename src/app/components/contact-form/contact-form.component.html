@@ -7,13 +7,15 @@
   </div>
   <div class="row mt-4">
     <div class="col-12">
-      <form>
+      <form #myForm="ngForm" (submit)="sendContactFormData(myForm)">
         <div class="mb-3">
           <label for="exampleInputName1" class="form-label">Name</label>
           <input
             type="text"
             class="form-control"
             id="exampleInputName1"
+            name="name"
+            ngModel
             required
           />
         </div>
@@ -26,6 +28,8 @@
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
+            name="email"
+            ngModel
             required
           />
           <div id="emailHelp" class="form-text">
@@ -40,15 +44,12 @@
             placeholder="Leave your message here"
             id="exampleInputTextArea"
             rows="8"
+            name="message"
+            ngModel
             required
           ></textarea>
         </div>
-        <button
-          type="submit"
-          class="btn btn-primary mb-4"
-          (click)="simpleAlert()"
-          #submitBtn
-        >
+        <button type="submit" class="btn btn-primary mb-4">
           <i class="fa-solid fa-paper-plane"></i> Submit
         </button>
       </form>
