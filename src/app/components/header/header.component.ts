@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   titles: string[] = ['software developer, web developer'];
 
   summary: string =
-    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.';
+    "I'm a Full-Stack Java Developer with 5+ years of experience in information systems, application development, and maintenance. I specialize in Java, Spring Boot, Hibernate, and Angular.";
 
   contactInfo: any = {
     github: 'https://github.com/tomcruzana',
