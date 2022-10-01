@@ -11,7 +11,7 @@ export class ProjectsService {
 
   projects: any = [
     {
-      name: 'Snippify',
+      name: 'codeSnip',
       img: this.IMG_PATH + 'x.png',
       link: this.GITHUB_PATH + 'x',
       technologies: ['java', 'spring boot', 'hibernate', 'angular', 'mariadb'],
