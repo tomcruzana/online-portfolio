@@ -15,11 +15,11 @@ export class ContactFormComponent implements OnInit {
 
   sendContactFormData(myForm: any) {
     this.contactFormData = myForm;
-    Swal.fire({
-      icon: 'success',
-      title: 'Your message has been sent.',
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    const name: any = this.contactFormData.controls.name.value;
+    const message: any = this.contactFormData.controls.message.value;
+    const myEmail: string = 'tomcruzana@ymail.com';
+
+    // open email w/ args
+    window.open(`mailto:${myEmail}?subject=${name}&body=${message}`);
   }
 }
