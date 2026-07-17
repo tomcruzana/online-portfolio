@@ -1,0 +1,67 @@
+{
+  "help": "Available commands: help, about, projects, contact, blog, resume, clear",
+  "about": "Hello, I’m Thomas, a full-stack developer with over 10 years of experience in technology. I specialize in React, TypeScript, Laravel, and MySQL, and hold an MSc in Information Technology with a focus on Enterprise Software Development.",
+  "projects": {
+    "type": "projects",
+    "items": [
+      {
+        "icon": "external-link",
+        "title": "kidcare360",
+        "url": "https://kidcare360.com",
+        "description": "Tracks child care activities, reports, Wi-Fi camera access, and AI assistance for day-to-day care workflows.",
+        "link": null
+      },
+      {
+        "icon": "external-link",
+        "title": "44pos.app",
+        "url": "https://44pos.app",
+        "description": "A point-of-sale system for small businesses to manage sales, inventory, customers, and daily operations.",
+        "link": null
+      }
+    ]
+  },
+  "contact": {
+    "type": "links",
+    "items": [
+      {
+        "label": "email",
+        "icon": "envelope",
+        "text": "email me",
+        "email": [
+          "thomascruzana",
+          "everbluesoftware.com"
+        ]
+      },
+      {
+        "label": "github",
+        "icon": "github",
+        "text": "github.com/tomc",
+        "url": "https://github.com/tomcruzana"
+      },
+      {
+        "label": "linkedin",
+        "icon": "linkedin",
+        "text": "linkedin.com/tomc",
+        "url": "http://linkedin.com/tomc"
+      },
+      {
+        "label": "facebook",
+        "icon": "facebook-square",
+        "text": "facebook.com/tomc",
+        "url": "https://www.facebook.com/cmot1101/"
+      }
+    ]
+  },
+  "blog": {
+    "type": "link",
+    "text": "dev.to/tommyc",
+    "url": "https://dev.to/tommyc"
+  },
+  "resume": {
+    "type": "link",
+    "text": "opening resume...",
+    "url": "/resume",
+    "openNewTab": true
+  },
+  "clear": ""
+}
