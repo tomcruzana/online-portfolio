@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Production artifacts
+dist/
+*.zip
+
+# Local development logs
+*.log
+vite-dev*.log
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Codex/AI workspace artifacts
+.agents/
+.codex/
+.codex-*/
+codex-*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
