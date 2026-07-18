@@ -163,8 +163,15 @@ body {
   line-height: 1;
 }
 
+.terminal-input-wrap {
+  position: relative;
+  display: inline-flex;
+  width: 12ch;
+}
+
 .terminal-prompt input {
-  min-width: 0;
+  width: 12ch;
+  min-width: 12ch;
   padding: 0;
   border: 0;
   outline: 0;
@@ -179,14 +186,18 @@ body {
 .terminal-prompt input:-webkit-autofill:focus {
   box-shadow: 0 0 0 1000px #1b1b26 inset;
   -webkit-text-fill-color: #cdd6f4;
-  caret-color: #cdd6f4;
+  caret-color: transparent;
 }
 
 .terminal-input-cursor {
-  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 14px;
   height: 26px;
   background: #cdd6f4;
+  pointer-events: none;
+  transform: translate(var(--cursor-offset), -50%);
   animation: blink 1s steps(1, end) infinite;
 }
 

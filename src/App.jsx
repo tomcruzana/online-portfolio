@@ -150,20 +150,24 @@ export default function App() {
             onSubmit={handleSubmit}
           >
             <label htmlFor="terminal-input">&gt;&gt;&nbsp;</label>
-            <input
-              id="terminal-input"
-              ref={inputRef}
-              aria-label="Terminal prompt"
-              autoFocus
-              autoComplete="off"
-              autoCapitalize="off"
-              maxLength={12}
-              spellCheck="false"
-              style={{ width: `${input.length || 0}ch` }}
-              value={input}
-              onChange={(event) => setInput(event.target.value)}
-            />
-            <span className="terminal-input-cursor" aria-hidden="true" />
+            <span
+              className="terminal-input-wrap"
+              style={{ "--cursor-offset": `${input.length}ch` }}
+            >
+              <input
+                id="terminal-input"
+                ref={inputRef}
+                aria-label="Terminal prompt"
+                autoFocus
+                autoComplete="off"
+                autoCapitalize="off"
+                maxLength={12}
+                spellCheck="false"
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+              />
+              <span className="terminal-input-cursor" aria-hidden="true" />
+            </span>
           </form>
           <div ref={terminalEndRef} />
         </div>
