@@ -3,6 +3,17 @@ RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+RewriteRule (^|/)\. - [F,L]
+RewriteRule (^|/)(wp-admin|wp-content|wp-includes)(/|$) - [F,L]
+RewriteRule ^(wp-login|xmlrpc)\.php$ - [F,L]
+RewriteRule ^wp-admin/install\.php$ - [F,L]
+RewriteRule ^(api/config|actuator/env|firebase\.json|appsettings\.json|composer\.(json|lock)|package(-lock)?\.json)$ - [F,L]
+RewriteRule \.(env|ini|log|bak|backup|old|sql|sqlite|db|config|yml|yaml|toml)$ - [F,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "SAMEORIGIN"

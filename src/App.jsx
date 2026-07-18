@@ -75,8 +75,22 @@ export default function App() {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    if (window.location.pathname.replace(/\/+$/, "") === "/resume") {
+    const requestedPath = window.location.pathname;
+    const normalizedPath = requestedPath.replace(/\/+$/, "") || "/";
+
+    if (normalizedPath === "/resume") {
       window.location.replace("/resume/thomascruzana-resume.pdf");
+      return;
+    }
+
+    if (normalizedPath !== "/") {
+      setLines([
+        {
+          command: "404",
+          response: `Error 404: Route not found: ${requestedPath}. Returning to main terminal.`,
+        },
+      ]);
+      window.history.replaceState(null, "", "/");
     }
   }, []);
 
