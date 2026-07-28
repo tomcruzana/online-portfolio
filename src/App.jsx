@@ -21,6 +21,15 @@ function TerminalOutput({ response }) {
     );
   }
 
+  if (response?.type === "readMore") {
+    return (
+      <div className="terminal-output">
+        <p>{response.preview}</p>
+        <p className="terminal-read-more">Read more...</p>
+      </div>
+    );
+  }
+
   if (response?.type === "links") {
     return (
       <div className="terminal-output terminal-links">
@@ -71,6 +80,7 @@ function TerminalOutput({ response }) {
 export default function App() {
   const [input, setInput] = useState("");
   const [lines, setLines] = useState([]);
+  const [readMoreText, setReadMoreText] = useState("");
   const terminalEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -109,6 +119,20 @@ export default function App() {
 
     if (commandKey === "clear") {
       setLines([]);
+      setReadMoreText("");
+      setInput("");
+      return;
+    }
+
+    if (!typedCommand && readMoreText) {
+      setLines((currentLines) => [
+        ...currentLines,
+        {
+          command: null,
+          response: readMoreText,
+        },
+      ]);
+      setReadMoreText("");
       setInput("");
       return;
     }
@@ -116,6 +140,12 @@ export default function App() {
     const response = typedCommand
       ? commands[commandKey] ?? `Unknown command: ${typedCommand}`
       : "";
+
+    if (response?.type === "readMore") {
+      setReadMoreText(response.more);
+    } else if (typedCommand) {
+      setReadMoreText("");
+    }
 
     if (response?.openNewTab && response.url) {
       window.open(response.url, "_blank", "noopener,noreferrer");
@@ -144,7 +174,7 @@ export default function App() {
       <section className="terminal-content" aria-label="Developer introduction">
         <header className="terminal-header">
           <h1>Thomas Cruzana</h1>
-          <p>Full-Stack Software Developer</p>
+          <p>Full-Stack Software Engineer</p>
           {lines.length === 0 ? (
             <p className="terminal-hint">type help to begin</p>
           ) : null}
@@ -152,7 +182,9 @@ export default function App() {
         <div className="terminal-session" aria-live="polite">
           {lines.map((line, index) => (
             <div className="terminal-entry" key={`${line.command}-${index}`}>
-              <p className="terminal-command">&gt;&gt; {line.command}</p>
+              {line.command !== null ? (
+                <p className="terminal-command">&gt;&gt; {line.command}</p>
+              ) : null}
               {line.response ? (
                 <TerminalOutput response={line.response} />
               ) : null}

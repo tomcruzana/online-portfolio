@@ -82,6 +82,10 @@ body {
   margin-bottom: 10px;
 }
 
+.terminal-output p {
+  margin: 0;
+}
+
 .terminal-command,
 .terminal-output {
   margin: 0;
@@ -91,6 +95,11 @@ body {
   line-height: 1.35;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+
+.terminal-read-more {
+  color: #7f849c;
+  margin-top: 10px !important;
 }
 
 .terminal-output a {
