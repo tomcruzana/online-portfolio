@@ -80,7 +80,7 @@ function TerminalOutput({ response }) {
 export default function App() {
   const [input, setInput] = useState("");
   const [lines, setLines] = useState([]);
-  const [readMoreText, setReadMoreText] = useState("");
+  const [readMoreQueue, setReadMoreQueue] = useState([]);
   const terminalEndRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -119,20 +119,28 @@ export default function App() {
 
     if (commandKey === "clear") {
       setLines([]);
-      setReadMoreText("");
+      setReadMoreQueue([]);
       setInput("");
       return;
     }
 
-    if (!typedCommand && readMoreText) {
+    if (!typedCommand && readMoreQueue.length > 0) {
+      const [nextParagraph, ...remainingParagraphs] = readMoreQueue;
       setLines((currentLines) => [
         ...currentLines,
         {
           command: null,
-          response: readMoreText,
+          response:
+            remainingParagraphs.length > 0
+              ? {
+                  type: "readMore",
+                  preview: nextParagraph,
+                  more: remainingParagraphs,
+                }
+              : nextParagraph,
         },
       ]);
-      setReadMoreText("");
+      setReadMoreQueue(remainingParagraphs);
       setInput("");
       return;
     }
@@ -142,9 +150,9 @@ export default function App() {
       : "";
 
     if (response?.type === "readMore") {
-      setReadMoreText(response.more);
+      setReadMoreQueue(Array.isArray(response.more) ? response.more : [response.more]);
     } else if (typedCommand) {
-      setReadMoreText("");
+      setReadMoreQueue([]);
     }
 
     if (response?.openNewTab && response.url) {

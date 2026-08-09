@@ -3,7 +3,10 @@
   "about": {
     "type": "readMore",
     "preview": "Hello, I\u2019m Thomas, a full-stack software engineer with over 10 years of experience in tech. I specialize in React, TypeScript, Laravel, and MySQL, and hold an M.S in Information Technology with a focus on Enterprise Software Development.",
-    "more": "My interest in technology began when I was 11 years old. I learned to assemble and disassemble desktop computers, install operating systems, and troubleshoot hardware and software issues. At 13, I discovered programming by experimenting with open-source Visual Basic 6 projects stored on a CD."
+    "more": [
+      "My interest in technology began when I was 11 years old. I learned to assemble and disassemble desktop computers, install operating systems, and troubleshoot hardware and software issues. At 13, I discovered programming by experimenting with open-source Visual Basic 6 projects stored on a CD.",
+      "Fast-forward to today, I create SaaS applications and help clients and businesses transform their ideas into reliable, scalable, and user-friendly software. I enjoy solving complex problems, improving inefficient processes, and building practical solutions that deliver lasting value."
+    ]
   },
   "projects": {
     "type": "projects",
